@@ -1,0 +1,64 @@
+.projects_container{
+    /* margin:0;
+    padding: 0;
+    box-sizing: border-box; */
+    display: flex;  
+    flex-direction: column;
+    /* flex-direction: row; */
+    /* flex-wrap: w9rap; */
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    gap:150px;
+    /* background: url('../Assets/reactjs.png'); */
+}
+
+.box{
+    position: relative;
+    width: 150px;
+    height: 260px;
+    border-radius: 10px;
+    transform-style: preserve-3d;
+    animation: animate 30s linear infinite;
+    margin-bottom: 50px;
+}
+
+.box:hover {
+    animation-play-state: paused;
+  }
+  
+@keyframes animate {
+    0% {
+        transform: perspective(1000px) rotateY(0deg);
+    }
+    100%{
+        transform: perspective(1000px) rotateY(360deg);
+    }
+}
+
+.box span {
+    position: absolute;
+    width:100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i)* 45deg)) translateZ(400px);
+    -webkit-box-reflect:below 0px linear-gradient(transparent, transparent, #0004);
+}
+
+.box span .card {
+    border-radius: 10px 10px 0 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* cursor: pointer; */
+}
+
+.projects_head{
+    align-self:flex-start;
+    color: #EFEDFF;
+    padding-left: 100px;
+    border: 0px solid yellow;
+    height: 20%;
+}

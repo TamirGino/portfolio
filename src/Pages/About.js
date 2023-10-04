@@ -3,7 +3,7 @@ import { m, LazyMotion, domAnimation } from "framer-motion";
 import {  Typography } from '@mui/material';
 import tamir from "../Assets/me2.png"
 import Scroller from '../Components/elements/Scroller';
-import styles from './Pages.module.css'
+import styles from '../Styles/Pages.module.css'
 import ThemeBtn from '../Components/elements/Button';
 import { about_me_text } from '../Constants/constants';
 import TimeLineResume from '../Components/elements/TimeLineResume';

@@ -31,6 +31,7 @@ const ThemeBtn = (props) => {
                         color: "white",
                         borderColor: '#CDA716 !important',
                         },
+                        ...props.sx,
                     }} >
                         {props.text}
         </Button>

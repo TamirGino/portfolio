@@ -1,17 +1,36 @@
 import React from 'react';
+import { m, LazyMotion, domAnimation } from "framer-motion";
+import {  Typography } from '@mui/material';
+import tamir from "../Assets/me2.png"
+import Scroller from '../Components/elements/Scroller';
+import styles from '../Styles/skills.module.css'
+import ThemeBtn from '../Components/elements/Button';
+import SkillsSwiper from '../Components/elements/Swiper';
 
 function Skills() {
   return (
-    <section style={{color:"white",height:"100vh"}} id="skills">
-            <h1 >Skills</h1>
-            <p>
-                Eugène Henri Paul Gauguin, was a French Post-Impressionist artist. 
-                Unappreciated until after his death, Gauguin is now recognized for 
-                his experimental use of color and Synthetist style that were 
-                distinct from Impressionism. Toward the end of his life, he 
-                spent ten years in French Polynesia. The paintings from this 
-                time depict people or landscapes from that region.</p>
-        </section>
+    <>
+        {/* {/* <div className={styles.projects_container} id="projects"> */}
+             
+             
+<div className={styles.container} >
+          <div className={styles.head} id="skills">
+                <Typography variant="h6" 
+                  sx={{color: '#CDA716', ml:2}}>
+                      WHAT DO I USE
+                </Typography>
+                <Typography  variant="h1" >
+                    SKILLS
+                </Typography>
+            </div>  
+
+      <div className={styles.box} >
+            <SkillsSwiper/>
+      </div>
+    </div>
+
+    
+        </>
   );
 }
 

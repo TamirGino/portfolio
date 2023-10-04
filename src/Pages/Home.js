@@ -5,7 +5,7 @@ import { Button, Typography } from '@mui/material';
 import avatar from "../Assets/avatar.png"
 import tamir from "../Assets/me2.png"
 import Scroller from '../Components/elements/Scroller';
-import styles from './Pages.module.css'
+import styles from '../Styles/Pages.module.css'
 import ThemeBtn from '../Components/elements/Button';
 
 

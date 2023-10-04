@@ -1,6 +1,5 @@
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-import LaptopMacIcon from '@mui/icons-material/LaptopMac';
 import ExpandMoreIcon from '@mui/icons-material/LaptopMac';
 import {resume_text} from '../../Constants/constants'
 
@@ -27,7 +26,7 @@ return(
         date={<Typography variant='subtitle2' sx={{fontStyle:'italic', ml:2}}>
             {text.date}</Typography>}
         iconStyle={{ background: '#CDA716', color: '#fff' }}
-        icon={<LaptopMacIcon /> }
+        icon={text.icon}
         visible='tr'
         >        
 

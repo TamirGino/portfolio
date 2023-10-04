@@ -3,7 +3,9 @@ import { m, LazyMotion, domAnimation } from "framer-motion";
 import {  Typography } from '@mui/material';
 import tamir from "../Assets/me2.png"
 import Scroller from '../Components/elements/Scroller';
-import styles from './projects.module.css'
+// import styles from './projects.module.css'
+import styles from '../Styles/projects.module.css'
+
 import ThemeBtn from '../Components/elements/Button';
 import { about_me_text } from '../Constants/constants';
 import TimeLineResume from '../Components/elements/TimeLineResume';
@@ -13,7 +15,6 @@ import ProjectCard from '../Components/elements/ProjectCard';
 function Projects() {
   return (
     <>
-        {/* {/* <div className={styles.projects_container} id="projects"> */}
              
              
 <div className={styles.projects_container} id="projects">

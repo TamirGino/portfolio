@@ -1,17 +1,36 @@
 import React from 'react';
-
+import { m, LazyMotion, domAnimation } from "framer-motion";
+import {  Typography } from '@mui/material';
+import tamir from "../Assets/me2.png"
+import Scroller from '../Components/elements/Scroller';
+import styles from '../Styles/contact.module.css'
+import ThemeBtn from '../Components/elements/Button';
+import SkillsSwiper from '../Components/elements/Swiper';
+import Form from '../Components/elements/Form'
 function Contact() {
   return (
-    <section style={{color:"white", height:"100vh"}} id="contact">
-            <h1 >Contact</h1>
-            <p>
-                Eugène Henri Paul Gauguin, was a French Post-Impressionist artist. 
-                Unappreciated until after his death, Gauguin is now recognized for 
-                his experimental use of color and Synthetist style that were 
-                distinct from Impressionism. Toward the end of his life, he 
-                spent ten years in French Polynesia. The paintings from this 
-                time depict people or landscapes from that region.</p>
-        </section>
+    <>
+        {/* {/* <div className={styles.projects_container} id="projects"> */}
+             
+             
+<div className={styles.container} id="contact">
+          <div className={styles.head} >
+                <Typography variant="h6" 
+                  sx={{color: '#CDA716', ml:2}}>
+                      LET'S GET IN TOUCH
+                </Typography>
+                <Typography  variant="h1" >
+                    CONTACT ME
+                </Typography>
+            </div>  
+
+      <div className={styles.box} >
+            <Form/>
+      </div>
+    </div>
+
+    
+        </>
   );
 }
 
