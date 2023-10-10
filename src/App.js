@@ -5,18 +5,19 @@ import About from './Pages/About';
 import Projects from './Pages/Projects';
 import Skills from './Pages/Skills';
 import Contact from './Pages/Contact';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import PagesRouter from './Components/Routes/PagesRouter';
+
 
 
 function App() {
   return (
-    <div id="home" className="App">
+    <Router>
+      <div className="App">
         <NavBar />
-        <Home/>
-        <About/>
-        <Projects/>
-        <Skills/>
-        <Contact/>
-    </div>
+        <PagesRouter/>
+      </div>
+    </Router>
   );
 }
 

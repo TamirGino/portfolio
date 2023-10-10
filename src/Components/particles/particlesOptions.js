@@ -6,10 +6,12 @@
    Creation: 02/06/2023
    Last modification: 02/06/2023
 */
+import WorkOutlineOutlinedIcon from '@mui/icons-material/WorkOutlineOutlined';
+
 
 
 export const options = {
-  autoPlay: false,
+  autoPlay: true,
 
   fullScreen: {
     enable: false,
@@ -18,7 +20,7 @@ export const options = {
   },
 
   detectRetina: true,
-  fpsLimit: 120,
+  fpsLimit: 100,
 
   interactivity: {
     detectsOn: '#home',
@@ -96,7 +98,7 @@ export const options = {
       bubble: {
         distance: 100,
         duration: 0.4,
-        size: 40,
+        size: 20,
         color: {
           value: '#cbbde5',
         },
@@ -124,7 +126,7 @@ export const options = {
     move: {
       angle: {
         offset: 0,
-        value: 90,
+        value: 180,
       },
       center: {
         x: 50,
@@ -137,7 +139,7 @@ export const options = {
       enable: true,
       random: false,
       size: false,
-      speed: 0.8,
+      speed: 5,
       outMode: 'bounce',
     },
     number: {
@@ -148,10 +150,10 @@ export const options = {
     opacity: {
       random: {
         enable: true,
-        minimumValue: 0.4,
-        maxValue: 0.6,
+        minimumValue: 0.6,
+        maxValue: 0.8,
       },
-      value: 0.6,
+      value: 0.8,
       animation: {
         count: 0,
         enable: true,
@@ -166,34 +168,34 @@ export const options = {
     shape: {
       type: 'character',
       character: [
-        // {
-        //   fill: false,
-        //   font: 'Font Awesome 6 Brands',
-        //   style: '',
-        //   value: ['JS'],
-        //   weight: '400',
-        // },
-        // {
-        //   fill: false,
-        //   font: 'Font Awesome 6 Brands',
-        //   style: '',
-        //   value: ['css'],
-        //   weight: '400',
-        // },
+        {
+          fill: false,
+          font: 'Font Awesome 6 Brands',
+          style: '',
+          value: [' 💻 '],
+          weight: '400',
+        },
+        {
+          fill: false,
+          font: 'Font Awesome 6 Brands',
+          style: '',
+          value: [' 👥'],
+          weight: '400',
+        },
         {
           fill: true,
           font: 'Font Awesome 6 Brands',
           style: '',
-          value: ['⚪'],
+          value: ['🌐'],
           weight: '',
         },
-        {
-          fill: true,
-          font: 'Font Awesome 6 Brands',
-          style: 'width="100px',
-          value: ['⚪'],
-          weight: '',
-        },
+        // {
+        //   fill: true,
+        //   font: 'Font Awesome 6 Brands',
+        //   style: 'width="100px',
+        //   value: ['🌐🗣'],
+        //   weight: ''
+        // },
       ],
     },
     // ✨ ⭐ 🌟 
@@ -204,8 +206,8 @@ export const options = {
     size: {
       random: {
         enable: true,
-        minimumValue: 25,
-        maxValue: 35,
+        minimumValue: 15,
+        maxValue: 25,
       },
       animation: {
         count: 0,
@@ -226,8 +228,8 @@ export const options = {
       consent: true,
       distance: 100,
       enable: true,
-      frequency: 10,
-      opacity: 0.4,
+      frequency: 20,
+      opacity: 0.5,
       width: 1,
     },
   },

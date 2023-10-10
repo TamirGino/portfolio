@@ -6,8 +6,12 @@ import Scroller from '../Components/elements/Scroller';
 import styles from '../Styles/skills.module.css'
 import ThemeBtn from '../Components/elements/Button';
 import SkillsSwiper from '../Components/elements/Swiper';
+import { useMediaQuery } from '@mui/material';
+
 
 function Skills() {
+  const isLandscape = useMediaQuery('(max-height: 720px)');
+
   return (
     <>
         {/* {/* <div className={styles.projects_container} id="projects"> */}
@@ -16,7 +20,7 @@ function Skills() {
 <div className={styles.container} >
           <div className={styles.head} id="skills">
                 <Typography variant="h6" 
-                  sx={{color: '#CDA716', ml:2}}>
+                  sx={{color: '#CDA716', ml:2, display: isLandscape && 'none'}}>
                       WHAT DO I USE
                 </Typography>
                 <Typography  variant="h1" >
@@ -24,7 +28,7 @@ function Skills() {
                 </Typography>
             </div>  
 
-      <div className={styles.box} >
+      <div className={styles.skillsBox} >
             <SkillsSwiper/>
       </div>
     </div>

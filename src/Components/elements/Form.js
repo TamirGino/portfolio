@@ -69,6 +69,11 @@ export default function Form(props) {
         backgroundColor: 'transparant',
         boxShadow: 'rgba(150, 150, 150, 0.9) 0px 5px 15px',
         borderRadius:'10px',
+        display: 'flex',
+        // flexDirection: 'column',
+        justifyContent:'center',
+        alignItems: 'center',
+
       }} component="main" maxWidth="xs">
         <Box
           sx={{
@@ -86,8 +91,8 @@ export default function Form(props) {
           {/* <Typography sx={{color:"white"}} component="h1" variant="h5">
             Register
           </Typography> */}
-          <Box sx={{ mt: 0, display:'flex', flexDirection:'column',
-           gap:'20px', justifyContent:'space-between', flexWrap:'wrap', }}>
+          <Box sx={{ mt: 0, display:'flex', 
+           gap:'20px', justifyContent:'center', flexWrap:'wrap', }}>
           <TextField
               onChange={onNameChange}
               variant="filled"
@@ -144,7 +149,7 @@ export default function Form(props) {
             >
               Register
             </Button> */}
-            <ThemeBtn sx={{marginBottom:2}} text={"CONTACT ME"} />
+            <ThemeBtn sx={{marginBottom:2, }} text={"CONTACT ME"} />
             
           </Box>
           

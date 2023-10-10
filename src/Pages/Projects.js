@@ -11,22 +11,31 @@ import { about_me_text } from '../Constants/constants';
 import TimeLineResume from '../Components/elements/TimeLineResume';
 import avatar from "../Assets/avatar.png"
 import ProjectCard from '../Components/elements/ProjectCard';
+import { useMediaQuery } from '@mui/material';
+
+
 
 function Projects() {
+  const isPortrait = useMediaQuery('(max-width: 620px)');
+  const isLandscape = useMediaQuery('(max-height: 720px)');
+
+
+
   return (
     <>
              
              
-<div className={styles.projects_container} id="projects">
-          <div className={styles.projects_head}>
+<div className={styles.container} id="projects">
+          <div className={styles.head}>
                 <Typography variant="h6" 
-                  sx={{color: '#CDA716', ml:2}}>
+                  sx={{color: '#CDA716', display: isLandscape && 'none'}}>
                       WHAT I HAVE DONE RECENTLY
-                </Typography>
-                <Typography  variant="h1" >
+                </Typography> 
+                <Typography  variant={isPortrait ? 'h2' : isLandscape ?  'h2' : 'h1'}>
                     PROJECTS
                 </Typography>
             </div>  
+            
 
       <div className={styles.box}>
         <span style={{'--i': 1}}> <ProjectCard className={styles.card} alt="avatar" /></span>

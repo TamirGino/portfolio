@@ -13,6 +13,7 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import { HashLink } from 'react-router-hash-link';
 import styles from './NavBar.module.css'
+import { Link } from 'react-router-dom';
 
 // const pages = ['Products', 'Pricing', 'Blog'];
 const pages = ['About', 'Projects', 'Skills', 'Contact'];
@@ -38,32 +39,34 @@ function NavBar() {
 
 
   return (
-    <AppBar elevation={0} position="sticky" sx={{background: 'transparent'}}>
-      <Container maxWidth="xl" sx={{padding:'15px'}}>
+    <AppBar elevation={0} position="sticky" sx={{background: 'transparent',
+        Width:'100vw', minWidth:'100vw', height: '15vh'}}>
+      <Container maxWidth="xl" sx={{padding:'15px', position:"relative"}}>
         <Toolbar disableGutters>
           <Box sx={{ flexGrow: 0, padding:'15px' }}>
-            <HashLink  smooth to={"/#home"}>
+            <Link to="/home">
                 <IconButton >
                   <Avatar alt="Tamir Gino" src={require("../../Assets/avatar.png")} />
                 </IconButton>
-            </HashLink>
+            </Link>
           </Box>
           <Box sx={{ flexGrow: 50 }} />
           <Box sx={{ flexGrow: 1, display: { xs: 'none', sm: 'flex', gap:'50px' } }}>
             {pages.map((page) => (
             //   <Button
-              <HashLink  smooth to={"/#" + page.toLowerCase()}
+              <Link to={"/" + page.toLowerCase()}
                 key={page}
                 className={styles.nav_link}
                 >
                 
                     {page}
-                </HashLink>
+                </Link>
                 
             //   </Button>
             ))}
           </Box>
-          <Box sx={{ flexGrow: 0, display: { xs: 'block', sm: 'none' } }}>
+          <Box sx={{  display: { xs: 'block', sm: 'none' },
+                    position: 'relative', zIndex:'50' }}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -88,11 +91,20 @@ function NavBar() {
               }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
+              sx={{
+                zIndex: 50, // Add this line to set a higher z-index than the content
+              }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
+                <Link  to={"/" + page.toLowerCase()}
+                  key={page}
+                  className={styles.nav_link_responsive}
+                >
+                  <MenuItem 
+                   key={page} onClick={handleCloseNavMenu}>
+                    <Typography textAlign="center">{page}</Typography>
+                  </MenuItem>
+                </Link>
               ))}
             </Menu>
           </Box>
