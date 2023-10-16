@@ -3,7 +3,6 @@ import { useMediaQuery } from '@mui/material';
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-import LaptopMacIcon from '@mui/icons-material/LaptopMac';
 import js_logo from '../../Assets/javascript-logo.png'
 import nodeJs_logo from '../../Assets/nodejs-logo.png'
 import html_logo from '../../Assets/html-logo.png'
@@ -32,14 +31,18 @@ import {  Tooltip, Zoom } from '@mui/material';
 export default function SkillsSwiper() {
     const isLargeScreen = useMediaQuery('(min-width: 968px)');
     const isMediumScreen = useMediaQuery('(min-width: 712px)');
+    const [slidesPerView, setSlidesPerView] = useState(3)
 
-    let slidesPerView = 1
+  useEffect(() => {
 
     if (isLargeScreen) {
-        slidesPerView = 3;
+        setSlidesPerView(3);
       } else if (isMediumScreen) {
-        slidesPerView = 2;
+        setSlidesPerView(2);
       }
+
+  },[]);
+    
 
   return (
     <>

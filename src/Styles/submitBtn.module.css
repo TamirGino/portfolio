@@ -1,0 +1,131 @@
+/* Apply box-sizing to all elements */
+
+  
+  /* Set the base font size for the document */
+
+  /* Specify the font for the body text */
+
+  
+  /* Define styles for the .container class */
+  .container {
+    /* padding-top: 80px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Define styles for the .button class */
+
+  .button {
+    margin-bottom: 15px;
+    color:white;
+    border-radius:50px;
+    border: 1px solid #CDA716 !important;
+    background-color: transparent ;
+    cursor: pointer;
+    padding: 10px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    overflow: hidden;
+    width: 250px;
+    /* line-height:10px; */
+    /* outline: none;
+    border: none; */
+    
+    position: relative;
+  }
+  .button:hover {
+    /* background-color: #CDA716 ; */
+    /* box-shadow: 0px 2px 6px #ffffff; */
+  }
+
+  
+  /* Define styles for the .button-text class */
+  .button_text {
+    transition: transform 200ms ease;
+    font-size: 20px;
+    width: 100px;
+    text-align:center;
+  }
+  
+  /* Define styles for the .loading state of .button-text */
+  .button_text.loading:after {
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: bottom;
+    -webkit-animation: ellipsis steps(4, end) 900ms infinite;
+    animation: ellipsis steps(4, end) 900ms infinite;
+    content: "\2026"; /* ASCII code for the ellipsis character */
+    width: 0px;
+  }
+  
+  /* Define styles for the 'i' element within .button */
+  .button i {
+    /* font-size: 1rem; */
+    font-size: 10px;
+  }
+  
+  /* Define styles for the .icon_send class */
+  .icon_send {
+    margin-right: 10px;
+    transition: 800ms ease;
+  }
+  
+  /* Define styles for the .icon_check class */
+  .icon_check {
+    margin-right: 10px;
+    opacity: 0;
+    position: absolute;
+    left: 80px;
+    transform: translateY(-80px);
+    transition: 2000ms ease;
+  }
+  
+  /* Create a class to disable transitions */
+  .notransition {
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    transition: none;
+  }
+  
+  /* Keyframes animation for ellipsis */
+  @keyframes ellipsis {
+    to {
+      width: 20px;
+    }
+  }
+  
+  /* Webkit keyframes animation for ellipsis */
+  @-webkit-keyframes ellipsis {
+    to {
+      width: 20px;
+    }
+  }
+  
+  /* Define styles for material icons */
+  .material_icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px; /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+  
+    /* Support for all WebKit browsers */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE */
+    font-feature-settings: 'liga';
+  }

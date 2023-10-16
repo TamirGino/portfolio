@@ -9,8 +9,13 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import { Alert, Snackbar } from '@mui/material';
+import { Alert, Snackbar,MuiAlert } from '@mui/material';
 import ThemeBtn from './Button';
+import { and, collection, doc, getDocs, query, setDoc, where } from 'firebase/firestore';
+import { db } from '../../config/firebase';
+import SubmitBtn from './SubmitButton';
+
+
 
 
 
@@ -32,8 +37,12 @@ export default function Form(props) {
 
   
   const [email,setEmail] = useState("")
-  const [password,setPassword] = useState("")
+  const [message,setPassword] = useState("")
   const [name,setName] = useState("")
+  const [openSnack, setOpenSnack] = useState(false);
+  const [errorMsg, setErrorMsg] = useState("");
+  const [avatarOpacity, setAvatarOpacity] = useState(1);
+
   // const [openAlert, setOpenAlert] = useState(false);
 
   // const handleClose = (event, reason) => {
@@ -42,16 +51,67 @@ export default function Form(props) {
   //   }
   //   setOpenAlert(false);
   // };
+  
 
-  const handleSubmit = (event) => {
-    console.log(email, password)
+  const handleCloseAlert = () => {
+    setOpenSnack(false);
+  };
+
+  const handleSubmit = async () => {
+    setAvatarOpacity(0.3);
+      try {
+        const messagesRef  = collection(db, 'messages');
+        const snapshot = await getDocs(messagesRef );
+        let maxId = 0;
+  
+        snapshot.forEach((doc) => {
+          const docId = parseInt(doc.id);
+          if (docId > maxId) {
+            maxId = docId;
+          }
+        });
+        const newMessageId = maxId + 1;
+        // insert submition date and time 
+        const currentDate = new Date();
+        const day = String(currentDate.getDate()).padStart(2, '0');
+        const month = String(currentDate.getMonth() + 1).padStart(2, '0');
+        const year = currentDate.getFullYear();
+        const formattedDate = `${day}-${month}-${year}`;
+  
+        const hours = String(currentDate.getHours()).padStart(2, '0');
+        const minutes = String(currentDate.getMinutes()).padStart(2, '0');
+        const formattedTime = `${hours}:${minutes}`; 
+  
+        // Add the new message to Firestore
+        const newDocRef = doc(messagesRef, String(newMessageId));
+        await setDoc(newDocRef, { id: newMessageId, email: email, name: name, message:message,
+           submission_date: formattedDate, submission_time: formattedTime, } );
+           console.log("message sent successfully");
+           setTimeout(() => {
+            setAvatarOpacity(1);
+          }, 2000);
+           
+      } catch (err) {
+        console.log(err);
+      
+    }
+     
+    
+  };
+  
+  const handleError = (errMsg) =>{
+    setErrorMsg(errMsg)
+  }
+
+  const handleAlert = () => {
+    setOpenSnack(true)
   };
 
   const onEmailChange = (event) => {
     setEmail(event.target.value)
   }
 
-  const onPassChange = (event) => {
+  const onMessageChange = (event) => {
     setPassword(event.target.value)
   }
 
@@ -85,7 +145,7 @@ export default function Form(props) {
           }}
         >
         
-          <Avatar sx={{ m: 2, bgcolor: '#CDA716', opacity:0.7 }}>
+          <Avatar sx={{ m: 2, bgcolor: '#CDA716', opacity: avatarOpacity }}>
             <EmailOutlinedIcon />
           </Avatar>
           {/* <Typography sx={{color:"white"}} component="h1" variant="h5">
@@ -118,14 +178,14 @@ export default function Form(props) {
               label="Email Address"
               name="email"
               autoComplete="email"
-              autoFocus
               sx={{
                 backgroundColor: 'white', borderRadius:'5px',
               }}
             />
+            {/* {error && <h5 style={{color: 'red'}}>{error}</h5>} */}
             <TextField
               minRows={3}
-              onChange={onPassChange}
+              onChange={onMessageChange}
               variant="filled"
               margin="normal"
               required
@@ -149,7 +209,17 @@ export default function Form(props) {
             >
               Register
             </Button> */}
-            <ThemeBtn sx={{marginBottom:2, }} text={"CONTACT ME"} />
+            <div >
+              {/* <ThemeBtn sx={{marginBottom:2, }} text={"CONTACT ME"}  /> */}
+              <SubmitBtn name={name} email={email} message={message}
+              handleAlert={handleAlert} errMsg={handleError} submit={handleSubmit}/>
+            </div>
+            
+            <Snackbar open={openSnack} autoHideDuration={3000} onClose={handleCloseAlert} >
+                <Alert severity="error" sx={{ width: '100%', justifyContent: 'center' }}>
+                    {errorMsg}
+                 </Alert>
+              </Snackbar>
             
           </Box>
           

@@ -1,5 +1,5 @@
 import React from 'react';
-import { m, LazyMotion, domAnimation } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import {  Typography } from '@mui/material';
 import tamir from "../Assets/me2.png"
 import Scroller from '../Components/elements/Scroller';
@@ -12,6 +12,7 @@ import TimeLineResume from '../Components/elements/TimeLineResume';
 import avatar from "../Assets/avatar.png"
 import ProjectCard from '../Components/elements/ProjectCard';
 import { useMediaQuery } from '@mui/material';
+import Title from '../Components/elements/Title';
 
 
 
@@ -26,7 +27,16 @@ function Projects() {
              
              
 <div className={styles.container} id="projects">
-          <div className={styles.head}>
+    <div className={styles.head} style={{gap:'0px'}}>
+    <Title variant_sub={"h6"} subTitle={"WHAT I HAVE DONE RECENTLY"}
+            // variant_title={isPortrait ? 'h2' : isLandscape ?  'h2' : 'h1'}
+            fontSize={ isPortrait ? 65 : isLandscape ?  65 : 80}
+            title={"PROJECTS"} sx={{display: isLandscape && 'none'}} />
+      </div>
+          {/* <motion.div className={styles.head} style={{gap:'0px'}}
+            initial={{ x: -100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1 }}>
                 <Typography variant="h6" 
                   sx={{color: '#CDA716', display: isLandscape && 'none'}}>
                       WHAT I HAVE DONE RECENTLY
@@ -34,7 +44,7 @@ function Projects() {
                 <Typography  variant={isPortrait ? 'h2' : isLandscape ?  'h2' : 'h1'}>
                     PROJECTS
                 </Typography>
-            </div>  
+            </motion.div> */}
             
 
       <div className={styles.box}>

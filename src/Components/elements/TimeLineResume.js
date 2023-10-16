@@ -1,3 +1,4 @@
+import * as React from 'react';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import ExpandMoreIcon from '@mui/icons-material/LaptopMac';
@@ -9,6 +10,12 @@ import { Accordion, AccordionDetails, AccordionSummary, Typography } from '@mui/
 
 
 function TimeLineResume() {
+const [expanded, setExpanded] = React.useState(false);
+
+  const handleChange = (panel) => (event, isExpanded) => {
+    setExpanded(isExpanded ? panel : false);
+  };
+
 return(
     <>
 <VerticalTimeline
@@ -27,26 +34,27 @@ return(
             {text.date}</Typography>}
         iconStyle={{ background: '#CDA716', color: '#fff' }}
         icon={text.icon}
-        visible='tr'
+        visible={true}
         >        
 
-            <Accordion elevation={0} sx={{}}> 
+            <Accordion elevation={0} expanded={expanded === index}
+             onChange={handleChange(index)}> 
                  <AccordionSummary
                     
                     expandIcon={"👇"}
                     aria-controls="panel1a-content"
                     id="panel1a-header"
                     >
-                    <Typography  variant='h5'>    
+                    <Typography component={'span'}  variant='h5'>    
                         {text.title}
                     </Typography>
                  </AccordionSummary> 
                  <AccordionDetails>
-                        <Typography variant='subtitle1' mt={-2}
+                        <Typography variant='subtitle1' mt={-2} component={'span'}
                         sx={{fontWeight:'bold'}}>    
                             {text.subTitle}
                         </Typography>
-                    <Typography variant='body2'>
+                    <Typography component={'span'} variant='body2'>
                         {Array.isArray(text.description)
                             ? (
                             <ul>
