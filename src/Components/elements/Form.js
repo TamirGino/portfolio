@@ -160,7 +160,7 @@ export default function Form(props) {
               required
               fullWidth
               id="name"
-              label="Full name"
+              label="Full Name"
               name="name"
               autoComplete="name"
               autoFocus

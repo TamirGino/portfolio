@@ -3,12 +3,14 @@ import { useMediaQuery } from '@mui/material';
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-import js_logo from '../../Assets/javascript-logo.png'
-import nodeJs_logo from '../../Assets/nodejs-logo.png'
-import html_logo from '../../Assets/html-logo.png'
-import react_logo from '../../Assets/react-logo.png'
-import css_logo from '../../Assets/css-logo.png'
-import python_logo from '../../Assets/python-logo.png'
+import js_logo from '../../Assets/Logos/javascript-logo.png'
+import nodeJs_logo from '../../Assets/Logos/nodejs-logo.png'
+import html_logo from '../../Assets/Logos/html-logo.png'
+import react_logo from '../../Assets/Logos/react-logo.png'
+import css_logo from '../../Assets/Logos/css-logo.png'
+import python_logo from '../../Assets/Logos/python-logo.png'
+import {skills_logo} from '../../Constants/constants'
+
 
 
 
@@ -61,7 +63,13 @@ export default function SkillsSwiper() {
         className={styles.swiper}
        
       >
-        <SwiperSlide className={styles.swiper_slide}>
+        {skills_logo.map(( logo, index) =>
+        (<SwiperSlide className={styles.swiper_slide} key={index}>
+            <Tooltip title={logo.title} placement="top" TransitionComponent={Zoom} TransitionProps={{ timeout: 300 }}>
+                <img src={logo.logo} alt="logo"/>
+            </Tooltip>
+        </SwiperSlide>))}
+        {/* <SwiperSlide className={styles.swiper_slide}>
             <Tooltip title="React js" placement="top" TransitionComponent={Zoom} TransitionProps={{ timeout: 300 }}>
                 <img src={react_logo} alt="logo"/>
             </Tooltip>
@@ -105,7 +113,7 @@ export default function SkillsSwiper() {
             <Tooltip title="Mongo DB" placement="top" TransitionComponent={Zoom} TransitionProps={{ timeout: 300 }}>
                     <img src={nodeJs_logo} alt="logo"/>
             </Tooltip>
-        </SwiperSlide>
+        </SwiperSlide> */}
 
       </Swiper>
       
