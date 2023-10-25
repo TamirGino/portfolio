@@ -1,14 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import styles from '../../Styles/submitBtn.module.css';
 import SendIcon from '@mui/icons-material/Send';
 import CheckIcon from '@mui/icons-material/Check';
-import ThemeBtn from './Button';
 
 const SubmitBtn = (props) => {
     
     const isValidForm = () => {
         if (props.email === "" ||  props.name === "" || props.message === "") {
-            props.errMsg("Please fill in the all form")
+            props.errMsg("All fields are required !")
           return true;
       } else if(!isValidEmail()) {
             props.errMsg("Invalid Email")
@@ -24,12 +23,10 @@ const SubmitBtn = (props) => {
       }
 
     const handleClick = () => {
-    console.log(isValidForm(), "PARENT")
     if (isValidForm()) {
       props.handleAlert();
       return ;
     }
-      console.log("CHILD")
       const sendIcon = document.getElementById('icon-send');
       const buttonText = document.getElementById('button-text');
       const iconCheck = document.getElementById('icon-check');
@@ -38,9 +35,7 @@ const SubmitBtn = (props) => {
       buttonText.textContent = 'Sending...';
       buttonText.classList.add('loading');
       buttonText.style.transform = `translateX(-10px)`;
-      console.log("CHILD2")
       props.submit();
-      // Fake loading state
       setTimeout(() => {
         buttonText.style.transform = `translateY(80px)`;
         buttonText.classList.remove('loading');

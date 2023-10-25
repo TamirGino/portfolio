@@ -13,10 +13,8 @@ import PagesRouter from './Components/Routes/PagesRouter';
 function App() {
   return (
     <Router>
-      <div className="App">
         <NavBar />
         <PagesRouter/>
-      </div>
     </Router>
   );
 }

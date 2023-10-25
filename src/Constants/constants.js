@@ -1,7 +1,9 @@
 import { createTheme } from '@mui/material/styles';
+//icons
 import LaptopMacIcon from '@mui/icons-material/LaptopMac';
 import WorkOutlineOutlinedIcon from '@mui/icons-material/WorkOutlineOutlined';
 import SchoolOutlinedIcon from '@mui/icons-material/SchoolOutlined';
+//logos
 import react_logo from '../Assets/Logos/react-logo.png'
 import js_logo from '../Assets/Logos/javascript-logo.png'
 import nodeJs_logo from '../Assets/Logos/nodejs-logo.png'
@@ -14,12 +16,10 @@ import git_logo from '../Assets/Logos/git_logo.png'
 import firebase_logo from '../Assets/Logos/firebase_logo.png'
 import vscode_logo from '../Assets/Logos/vscode_logo.png'
 import figma_logo from '../Assets/Logos/figma_logo.png'
-
-
-
-
-
-
+//imgs
+import qm from '../Assets/Imgs/question_mark.png'
+import fd from '../Assets/Imgs/face_detection_img.png'
+import fd2 from '../Assets/Imgs/face_detection_img2.png'
 
 
 const theme = createTheme({
@@ -70,14 +70,6 @@ const resume_text = [
         date:"2018 - 2022",
         icon: <SchoolOutlinedIcon />
     },
-    // {
-    //     title:"Military Service",
-    //     subTitle:"Infantry division - combat soldier, NAHAL unit",
-    //     description:"Served three years in the IDF as a combat soldier in NAHAL unit, 931 regiment",
-    //     date:"2013 - 2016",
-    //     icon: <SchoolOutlinedIcon />
-    // },
-
 ] ;
 
 const skills_logo = [
@@ -131,11 +123,72 @@ const skills_logo = [
     },
 ]
 
+const cards_arr = [
+    {
+        title:"Face Detection App",
+        description: "Face detection website with a login form. Enjoy exploring this amazing AI feature that also count the numbers of times.React js, node js, Mongo DB. ",
+        gitLink:"https://github.com/TamirGino/Face-detection-App",
+        viewLink:"https://face-detection-app-ce7r.onrender.com",
+        src_img:fd,
+    },
+    {
+        title:"Memory Game",
+        description: "Test your memory with robots api",
+        gitLink:"https://github.com/TamirGino/Cool-App",
+        viewLink:"https://how-good-is-your-memory.web.app/",
+        src_img:qm,
+    },
+    {
+        title:"Face Detection App",
+        description: "Face detection website with a login form. Enjoy exploring this amazing AI feature that also count the numbers of times.React js, node js, Mongo DB. ",
+        gitLink:"https://github.com/TamirGino/Face-detection-App",
+        viewLink:"https://face-detection-app-ce7r.onrender.com",
+        src_img:fd,
+    },
+    {
+        title:"Memory Game",
+        description: "Test your memory with robots api",
+        gitLink:"https://github.com/TamirGino/Cool-App",
+        viewLink:"https://how-good-is-your-memory.web.app/",
+        src_img:qm,
+    },
+    {
+        title:"Face Detection App",
+        description: "Face detection website with a login form. Enjoy exploring this amazing AI feature that also count the numbers of times.React js, node js, Mongo DB. ",
+        gitLink:"https://github.com/TamirGino/Face-detection-App",
+        viewLink:"https://face-detection-app-ce7r.onrender.com",
+        src_img:fd,
+    },
+    {
+        title:"Memory Game",
+        description: "Test your memory with robots api",
+        gitLink:"https://github.com/TamirGino/Cool-App",
+        viewLink:"https://how-good-is-your-memory.web.app/",
+        src_img:qm,
+    },
+    {
+        title:"Face Detection App",
+        description: "Face detection website with a login form. Enjoy exploring this amazing AI feature that also count the numbers of times.React js, node js, Mongo DB. ",
+        gitLink:"https://github.com/TamirGino/Face-detection-App",
+        viewLink:"https://face-detection-app-ce7r.onrender.com",
+        src_img:fd,
+    },
+    {
+        title:"Memory Game",
+        description: "Test your memory with robots api",
+        gitLink:"https://github.com/TamirGino/Cool-App",
+        viewLink:"https://how-good-is-your-memory.web.app/",
+        src_img:qm,
+    },
+    
+]
+
 
 
 export {
   theme,
   about_me_text,
   resume_text,
-  skills_logo
+  skills_logo,
+  cards_arr,
 }

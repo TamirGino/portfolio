@@ -1,12 +1,10 @@
 import React from 'react';
 import {  Typography } from "@mui/material";
-import { motion } from "framer-motion";
-import styles from '../../Styles/fonts.module.css'
-
+import { LazyMotion, domAnimation, motion } from "framer-motion"
 
 const Title = (props) => {
   return (
-    
+    <LazyMotion features={domAnimation}>
     <motion.div style={{gap:'0px'}}
             initial={{ x: -100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
@@ -19,7 +17,6 @@ const Title = (props) => {
                   {props.subTitle}
               </Typography>
               <Typography 
-            //   Love Ya Like A Sister\ italiana
                   fontSize={props.fontSize}
                   sx={{color: '#EFEDFF',cursor:'context-menu',
                          fontFamily: "Love Ya Like A Sister",
@@ -28,7 +25,7 @@ const Title = (props) => {
                        <br/>          
               </Typography>
               </motion.div>
-
+              </LazyMotion>
 
   );
 };

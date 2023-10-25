@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz@6..96&family=Cinzel+Decorative:wght@700&family=Dancing+Script:wght@600;700&family=Gabarito:wght@600&family=Indie+Flower&family=Italiana&family=Limelight&family=Love+Ya+Like+A+Sister&family=Nothing+You+Could+Do&family=Shadows+Into+Light&family=Short+Stack&family=Tangerine:wght@700&family=Tilt+Neon&display=swap');
+
 .container{
     display: flex;  
     flex-flow: wrap column;
@@ -5,7 +7,6 @@
     justify-content: flex-start;
     align-items: center;
     gap:100px;
-    border: 0px solid yellow;
 }
 
 .head{
@@ -16,12 +17,8 @@
     align-self:flex-start;
     color: #EFEDFF;
     padding-left: 100px;
-    border: 0px solid yellow;
     height: 20%;
 }
-
-
-
 
 .box{
     position: relative;
@@ -70,10 +67,6 @@
     .head{
         padding-left: 30px;
     }
-    /* body{
-        overflow: hidden ;
-        -webkit-overflow: hidden ;
-    } */
 
 }
 

@@ -1,57 +1,18 @@
 import  React, { useState } from 'react';
-import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
-import TextField from '@mui/material/TextField';
-import Link from '@mui/material/Link';
-import Grid from '@mui/material/Grid';
-import Box from '@mui/material/Box';
-import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
+import { Alert, Snackbar, Avatar, TextField, Box, Container } from '@mui/material';
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
-import Typography from '@mui/material/Typography';
-import Container from '@mui/material/Container';
-import { Alert, Snackbar,MuiAlert } from '@mui/material';
-import ThemeBtn from './Button';
-import { and, collection, doc, getDocs, query, setDoc, where } from 'firebase/firestore';
+import {  collection, doc, getDocs, setDoc } from 'firebase/firestore';
 import { db } from '../../config/firebase';
 import SubmitBtn from './SubmitButton';
 
-
-
-
-
-// function Copyright(props) {
-//   return (
-//     <Typography variant="body2" color="text.secondary" align="center" {...props}>
-//       {'Copyright © '}
-//       <Link color="inherit" href="https://mui.com/">
-//         Your Website
-//       </Link>{' '}
-//       {new Date().getFullYear()}
-//       {'.'}
-//     </Typography>
-//   );
-// }
-
-
-export default function Form(props) {
-
+export default function Form() {
   
   const [email,setEmail] = useState("")
   const [message,setPassword] = useState("")
   const [name,setName] = useState("")
   const [openSnack, setOpenSnack] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
-  const [avatarOpacity, setAvatarOpacity] = useState(1);
-
-  // const [openAlert, setOpenAlert] = useState(false);
-
-  // const handleClose = (event, reason) => {
-  //   if (reason === 'clickaway') {
-  //     return;
-  //   }
-  //   setOpenAlert(false);
-  // };
-  
+  const [avatarOpacity, setAvatarOpacity] = useState(1); 
 
   const handleCloseAlert = () => {
     setOpenSnack(false);
@@ -120,9 +81,6 @@ export default function Form(props) {
   }
 
   return (
-
-    // <ThemeProvider theme={defaultTheme}>
-    // <Card additionalStyle={additionalBoxStyle}>
       <Container sx={{
         borderLeft:"4px double #CDA716",
         borderRight:"4px double #CDA716",
@@ -130,7 +88,6 @@ export default function Form(props) {
         boxShadow: 'rgba(150, 150, 150, 0.9) 0px 5px 15px',
         borderRadius:'10px',
         display: 'flex',
-        // flexDirection: 'column',
         justifyContent:'center',
         alignItems: 'center',
 
@@ -148,9 +105,6 @@ export default function Form(props) {
           <Avatar sx={{ m: 2, bgcolor: '#CDA716', opacity: avatarOpacity }}>
             <EmailOutlinedIcon />
           </Avatar>
-          {/* <Typography sx={{color:"white"}} component="h1" variant="h5">
-            Register
-          </Typography> */}
           <Box sx={{ mt: 0, display:'flex', 
            gap:'20px', justifyContent:'center', flexWrap:'wrap', }}>
           <TextField
@@ -182,7 +136,6 @@ export default function Form(props) {
                 backgroundColor: 'white', borderRadius:'5px',
               }}
             />
-            {/* {error && <h5 style={{color: 'red'}}>{error}</h5>} */}
             <TextField
               minRows={3}
               onChange={onMessageChange}
@@ -200,42 +153,22 @@ export default function Form(props) {
                 backgroundColor: 'white', borderRadius:'5px'
               }}
             />
-
-            {/* <Button
-              type="submit"
-              variant="contained"
-              sx={{ mt: 3, mb: 2, alignSelf:'center' }}
-              onClick={handleSubmit}
-            >
-              Register
-            </Button> */}
             <div >
-              {/* <ThemeBtn sx={{marginBottom:2, }} text={"CONTACT ME"}  /> */}
               <SubmitBtn name={name} email={email} message={message}
               handleAlert={handleAlert} errMsg={handleError} submit={handleSubmit}/>
             </div>
             
-            <Snackbar open={openSnack} autoHideDuration={3000} onClose={handleCloseAlert} >
+            <Snackbar open={openSnack} autoHideDuration={3000} onClose={handleCloseAlert}
+            anchorOrigin={{
+              vertical: 'top', 
+              horizontal: 'center', 
+            }} >
                 <Alert severity="error" sx={{ width: '100%', justifyContent: 'center' }}>
                     {errorMsg}
                  </Alert>
               </Snackbar>
-            
           </Box>
-          
         </Box>
-         {/* {openAlert && <MuiAlert message={"Email or Password does'nt exist. Please try again."}/>}      */}
-        {/* <Snackbar open={openAlert} autoHideDuration={6000} onClose={handleClose} 
-        anchorOrigin={{
-        vertical: 'top', 
-        horizontal: 'center', 
-      }}>
-        <Alert onClose={handleClose} severity="error" variant="filled" sx={{ width: '100%' }}>
-          Email or Password does'nt exist. Please try again. 
-        </Alert>
-      </Snackbar> */}
-        
-        {/* <Copyright sx={{ mt: 8, mb: 4 }} /> */}
       </Container>
   );
 }

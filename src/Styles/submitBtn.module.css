@@ -19,7 +19,7 @@
   .button {
     margin-bottom: 15px;
     color:white;
-    border-radius:50px;
+    border-radius:25px;
     border: 1px solid #CDA716 !important;
     background-color: transparent ;
     cursor: pointer;
@@ -29,18 +29,9 @@
     justify-content: space-evenly;
     overflow: hidden;
     width: 250px;
-    /* line-height:10px; */
-    /* outline: none;
-    border: none; */
-    
     position: relative;
   }
-  .button:hover {
-    /* background-color: #CDA716 ; */
-    /* box-shadow: 0px 2px 6px #ffffff; */
-  }
 
-  
   /* Define styles for the .button-text class */
   .button_text {
     transition: transform 200ms ease;

@@ -1,15 +1,11 @@
 import * as React from 'react';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-import ExpandMoreIcon from '@mui/icons-material/LaptopMac';
 import {resume_text} from '../../Constants/constants'
-
-
 import { Accordion, AccordionDetails, AccordionSummary, Typography } from '@mui/material';
 
-
-
 function TimeLineResume() {
+
 const [expanded, setExpanded] = React.useState(false);
 
   const handleChange = (panel) => (event, isExpanded) => {
@@ -26,17 +22,13 @@ return(
     <VerticalTimelineElement
         key={index}
         className="vertical-timeline-element--work"
-        // contentStyle={{ color: 'black' }} //⏬
-        // contentStyle={<Typography variant='h6'></Typography>}
         contentArrowStyle={{ borderRight: '7px solid  #fff' }}
-        // date={'\u00A0 \u00A0 \u00A0' + text.date + '\u00A0 \u00A0 \u00A0'}
         date={<Typography variant='subtitle2' sx={{fontStyle:'italic', ml:2}}>
             {text.date}</Typography>}
         iconStyle={{ background: '#CDA716', color: '#fff' }}
         icon={text.icon}
         visible={true}
         >        
-
             <Accordion elevation={0} expanded={expanded === index}
              onChange={handleChange(index)}> 
                  <AccordionSummary

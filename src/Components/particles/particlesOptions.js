@@ -1,81 +1,14 @@
-/*
-   Copyright (C), 2023-2024, Sara Echeverria (bl33h)
-   Author: Sara Echeverria
-   FileName: particleOptions.js
-   Version: I
-   Creation: 02/06/2023
-   Last modification: 02/06/2023
-*/
-import WorkOutlineOutlinedIcon from '@mui/icons-material/WorkOutlineOutlined';
-
-
-
 export const options = {
   autoPlay: true,
-
   fullScreen: {
     enable: false,
     zIndex: -1,
-    
   },
-
   detectRetina: true,
   fpsLimit: 100,
-
   interactivity: {
     detectsOn: '#home',
     events: {
-      onDiv: [
-        // {
-        //   selectors: '#repulse-div',
-        //   enable: true,
-        //   mode: 'bounce',
-        //   type: 'circle',
-        // },
-        // {
-        //   selectors: '#repulse-div',
-        //   enable: true,
-        //   mode: 'repulse',
-        //   type: 'circle',
-        // },
-        // {
-        //   selectors: '#repulse-span',
-        //   enable: true,
-        //   mode: 'repulse',
-        //   type: 'circle',
-        // },
-        // {
-        //   selectors: '#repulse-span',
-        //   enable: true,
-        //   mode: 'bounce',
-        //   type: 'circle',
-        // },
-        // {
-        //   selectors: '#togglebutton',
-        //   enable: true,
-        //   mode: 'repulse',
-        //   type: 'circle',
-        // },
-        // {
-        //   selectors: '#togglebutton',
-        //   enable: true,
-        //   mode: 'bounce',
-        //   type: 'circle',
-        // },
-        // {
-        //   selectors: '#scroller',
-        //   enable: true,
-        //   mode: 'repulse',
-        //   type: 'circle',
-        // },
-        // {
-        //   selectors: '#scroller',
-        //   enable: true,
-        //   mode: 'bounce',
-        //   type: 'circle',
-        // },
-      ],
-
       onHover: {
         enable: true,
         mode: 'bubble',
@@ -189,20 +122,8 @@ export const options = {
           value: ['🌐'],
           weight: '',
         },
-        // {
-        //   fill: true,
-        //   font: 'Font Awesome 6 Brands',
-        //   style: 'width="100px',
-        //   value: ['🌐🗣'],
-        //   weight: ''
-        // },
       ],
     },
-    // ✨ ⭐ 🌟 
-    // 🌐 🫧
-    // 👤 👥 🗣
-    // 📱 💻 🖥 
-    // 🟡 ⚪ 🔘
     size: {
       random: {
         enable: true,

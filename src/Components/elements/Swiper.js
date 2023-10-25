@@ -1,49 +1,33 @@
-import React, { useRef, useState, useEffect } from 'react';
-import { useMediaQuery } from '@mui/material';
-
-// Import Swiper React components
+import React, { useState, useEffect } from 'react';
+import { useMediaQuery, Tooltip, Zoom } from '@mui/material';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import js_logo from '../../Assets/Logos/javascript-logo.png'
-import nodeJs_logo from '../../Assets/Logos/nodejs-logo.png'
-import html_logo from '../../Assets/Logos/html-logo.png'
-import react_logo from '../../Assets/Logos/react-logo.png'
-import css_logo from '../../Assets/Logos/css-logo.png'
-import python_logo from '../../Assets/Logos/python-logo.png'
 import {skills_logo} from '../../Constants/constants'
+import styles from '../../Styles/swiper.module.css';
 
-
-
-
-
-
-
-// Import Swiper styles
+// Import Swiper styles & modules
 import 'swiper/css';
 import 'swiper/css/grid';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-
-
-import styles from '../../Styles/Swiper.module.css';
-
-// import required modules
 import { Grid, Pagination, Navigation } from 'swiper/modules';
-import {  Tooltip, Zoom } from '@mui/material';
 
 export default function SkillsSwiper() {
+
     const isLargeScreen = useMediaQuery('(min-width: 968px)');
     const isMediumScreen = useMediaQuery('(min-width: 712px)');
-    const [slidesPerView, setSlidesPerView] = useState(3)
+    const isSmallScreen = useMediaQuery('(min-width: 520px)');
+    const [slidesPerView, setSlidesPerView] = useState(1)
 
   useEffect(() => {
+        if (isLargeScreen) {
+             setSlidesPerView(3);
+          } else if (isMediumScreen) {
+             setSlidesPerView(2);
+          } else if (isSmallScreen) {
+             setSlidesPerView(1);
+          }
 
-    if (isLargeScreen) {
-        setSlidesPerView(3);
-      } else if (isMediumScreen) {
-        setSlidesPerView(2);
-      }
-
-  },[]);
+  },[isLargeScreen, isMediumScreen, isSmallScreen]);
     
 
   return (
@@ -54,14 +38,12 @@ export default function SkillsSwiper() {
           rows: 2,
         }}
         spaceBetween={30}
-        // loop={true}
         pagination={{
           clickable: true,
         }} 
         navigation={true}
         modules={[Grid, Pagination, Navigation]}
         className={styles.swiper}
-       
       >
         {skills_logo.map(( logo, index) =>
         (<SwiperSlide className={styles.swiper_slide} key={index}>
@@ -69,54 +51,8 @@ export default function SkillsSwiper() {
                 <img src={logo.logo} alt="logo"/>
             </Tooltip>
         </SwiperSlide>))}
-        {/* <SwiperSlide className={styles.swiper_slide}>
-            <Tooltip title="React js" placement="top" TransitionComponent={Zoom} TransitionProps={{ timeout: 300 }}>
-                <img src={react_logo} alt="logo"/>
-            </Tooltip>
-        </SwiperSlide>
-        <SwiperSlide className={styles.swiper_slide}>
-            <Tooltip title="Node js" placement="top" TransitionComponent={Zoom} TransitionProps={{ timeout: 300 }}>
-                <img src={nodeJs_logo} alt="logo"/>
-            </Tooltip>
-        </SwiperSlide>
-        <SwiperSlide className={styles.swiper_slide}>
-            <Tooltip title="HTML" placement="top" TransitionComponent={Zoom} TransitionProps={{ timeout: 300 }}>
-                <img src={html_logo} alt="logo"/>
-            </Tooltip>
-        </SwiperSlide>
-        <SwiperSlide className={styles.swiper_slide}>
-            <Tooltip title="CSS" placement="top" TransitionComponent={Zoom} TransitionProps={{ timeout: 300 }}>
-                <img src={css_logo} alt="logo"/>
-            </Tooltip>
-        </SwiperSlide>
-        <SwiperSlide className={styles.swiper_slide}>
-            <Tooltip title="JavaScript" placement="top" TransitionComponent={Zoom} TransitionProps={{ timeout: 300 }}>
-                <img src={js_logo} alt="logo"/>
-            </Tooltip>
-        </SwiperSlide>
-        <SwiperSlide className={styles.swiper_slide}>
-            <Tooltip title="Python" placement="top" TransitionComponent={Zoom} TransitionProps={{ timeout: 300 }}>
-                <img src={python_logo} alt="logo"/>
-            </Tooltip>
-        </SwiperSlide>
-        <SwiperSlide className={styles.swiper_slide}>
-            <Tooltip title="SQL" placement="top" TransitionComponent={Zoom} TransitionProps={{ timeout: 300 }}>
-                <img src={js_logo} alt="logo"/>
-            </Tooltip>
-        </SwiperSlide>
-        <SwiperSlide className={styles.swiper_slide}>
-            <Tooltip title="Mongo DB" placement="top" TransitionComponent={Zoom} TransitionProps={{ timeout: 300 }}>
-                <img src={nodeJs_logo} alt="logo"/>
-            </Tooltip>
-        </SwiperSlide>
-        <SwiperSlide className={styles.swiper_slide}>
-            <Tooltip title="Mongo DB" placement="top" TransitionComponent={Zoom} TransitionProps={{ timeout: 300 }}>
-                    <img src={nodeJs_logo} alt="logo"/>
-            </Tooltip>
-        </SwiperSlide> */}
 
       </Swiper>
-      
  </>
   );
 }

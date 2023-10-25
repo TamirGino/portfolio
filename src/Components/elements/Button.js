@@ -1,6 +1,5 @@
 import React from 'react';
 import { Button } from "@mui/material";
-import { HashLink } from 'react-router-hash-link';
 
 const ThemeBtn = (props) => {
   return (
@@ -11,8 +10,6 @@ const ThemeBtn = (props) => {
                         borderColor: '#CDA716 !important',
                         ":hover": {
                         bgcolor: "#CDA716",
-                        // color: "white",
-                        // borderColor: '#CDA716 !important',
                         },
                         ...props.sx,
                     }} >
