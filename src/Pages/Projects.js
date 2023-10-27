@@ -25,7 +25,7 @@ function Projects() {
       </div>
 
       <div className={styles.box}>
-      {cards_arr.slice(0, 8).map((card, index) => (
+      {cards_arr.slice(0, 6).map((card, index) => (
         <span style={{ '--i': index + 1 }} key={index}>
           <ProjectCard
             title={card.title}
@@ -35,6 +35,7 @@ function Projects() {
             src_img={card.src_img}
             className={styles.card}
             fontFamily={"Gabarito"}
+            marginValue={card.marginTop}
           />
         </span>
       ))}

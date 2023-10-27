@@ -17,10 +17,9 @@ import firebase_logo from '../Assets/Logos/firebase_logo.png'
 import vscode_logo from '../Assets/Logos/vscode_logo.png'
 import figma_logo from '../Assets/Logos/figma_logo.png'
 //imgs
+import fd from '../Assets/Imgs/face_detection.png'
 import qm from '../Assets/Imgs/question_mark.png'
-import fd from '../Assets/Imgs/face_detection_img.png'
-import fd2 from '../Assets/Imgs/face_detection_img2.png'
-
+import ob from '../Assets/Imgs/nutriSurvey.png'
 
 const theme = createTheme({
   palette: {
@@ -125,60 +124,68 @@ const skills_logo = [
 
 const cards_arr = [
     {
-        title:"Face Detection App",
-        description: "Face detection website with a login form. Enjoy exploring this amazing AI feature that also count the numbers of times.React js, node js, Mongo DB. ",
+        title:"Face Detection",
+        description: "This full-stack web project combines React and Node.js with MongoDB to deliver a seamless user experience. The app utilizes the Clarifai API to detect faces in images when users insert a URL.",
         gitLink:"https://github.com/TamirGino/Face-detection-App",
         viewLink:"https://face-detection-app-ce7r.onrender.com",
         src_img:fd,
+        marginTop:1,
     },
     {
         title:"Memory Game",
-        description: "Test your memory with robots api",
+        description: "Step into a futuristic world of memory mastery with Robot Memory Challenge, a web app I've created by seamlessly integrating a cool robots API to test your cognitive skills.",
         gitLink:"https://github.com/TamirGino/Cool-App",
         viewLink:"https://how-good-is-your-memory.web.app/",
         src_img:qm,
+        marginTop:2,
     },
     {
-        title:"Face Detection App",
-        description: "Face detection website with a login form. Enjoy exploring this amazing AI feature that also count the numbers of times.React js, node js, Mongo DB. ",
+        title:"NutriSurvey Portfolio",
+        description: "A comprehensive platform designed to empower my nutritionist client and improve his connection with clients on their wellness journey.",
+        gitLink:"https://github.com/TamirGino/oren-braude",
+        viewLink:"https://project-oren-377a1.web.app/",
+        src_img:ob,
+        marginTop:1,
+    },
+    {
+        title:"Face Detection",
+        description: "This full-stack web project combines React and Node.js with MongoDB to deliver a seamless user experience. The app utilizes the Clarifai API to detect faces in images when users insert a URL.",
         gitLink:"https://github.com/TamirGino/Face-detection-App",
         viewLink:"https://face-detection-app-ce7r.onrender.com",
         src_img:fd,
+        marginTop:1,
     },
     {
         title:"Memory Game",
-        description: "Test your memory with robots api",
+        description: "Step into a futuristic world of memory mastery with Robot Memory Challenge, a web app I've created by seamlessly integrating a cool robots API to test your cognitive skills.",
         gitLink:"https://github.com/TamirGino/Cool-App",
         viewLink:"https://how-good-is-your-memory.web.app/",
         src_img:qm,
+        marginTop:2,
     },
     {
-        title:"Face Detection App",
-        description: "Face detection website with a login form. Enjoy exploring this amazing AI feature that also count the numbers of times.React js, node js, Mongo DB. ",
+        title:"NutriSurvey Portfolio",
+        description: "A comprehensive platform designed to empower my nutritionist client and improve his connection with clients on their wellness journey.",
+        gitLink:"https://github.com/TamirGino/oren-braude",
+        viewLink:"https://project-oren-377a1.web.app/",
+        src_img:ob,
+        marginTop:1,
+    },
+    {
+        title:"Face Detection",
+        description: "This full-stack web project combines React and Node.js with MongoDB to deliver a seamless user experience. The app utilizes the Clarifai API to detect faces in images when users insert a URL.",
         gitLink:"https://github.com/TamirGino/Face-detection-App",
         viewLink:"https://face-detection-app-ce7r.onrender.com",
         src_img:fd,
+        marginTop:1,
     },
     {
         title:"Memory Game",
-        description: "Test your memory with robots api",
+        description: "Step into a futuristic world of memory mastery with Robot Memory Challenge, a web app I've created by seamlessly integrating a cool robots API to test your cognitive skills.",
         gitLink:"https://github.com/TamirGino/Cool-App",
         viewLink:"https://how-good-is-your-memory.web.app/",
         src_img:qm,
-    },
-    {
-        title:"Face Detection App",
-        description: "Face detection website with a login form. Enjoy exploring this amazing AI feature that also count the numbers of times.React js, node js, Mongo DB. ",
-        gitLink:"https://github.com/TamirGino/Face-detection-App",
-        viewLink:"https://face-detection-app-ce7r.onrender.com",
-        src_img:fd,
-    },
-    {
-        title:"Memory Game",
-        description: "Test your memory with robots api",
-        gitLink:"https://github.com/TamirGino/Cool-App",
-        viewLink:"https://how-good-is-your-memory.web.app/",
-        src_img:qm,
+        marginTop:2,
     },
     
 ]
