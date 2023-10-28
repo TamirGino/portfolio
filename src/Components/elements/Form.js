@@ -117,7 +117,6 @@ export default function Form() {
               label="Full Name"
               name="name"
               autoComplete="name"
-              autoFocus
               sx={{
                 backgroundColor: 'white', borderRadius:'5px',
               }}

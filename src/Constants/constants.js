@@ -51,7 +51,7 @@ const resume_text = [
     {
         title:"Freelancer",
         subTitle:"Web developer freelance - Tel Aviv, IL",
-        description:["Working as a freelancer, designing and developing web pages using Webflow platform. "],
+        description:["As a freelance web designer and developer, I utilize a diverse set of skills and methods to craft functional web pages. My toolkit includes a mastery of Webflow platform, allowing me to transform ideas into visually stunning and responsive online experiences, among other skills and methods"],
         date:"Aug 2023 - present",
         icon: <LaptopMacIcon />
     },
@@ -65,7 +65,7 @@ const resume_text = [
      {
         title:"Education ",
         subTitle:"B.sc in Industrial Engineering & Management at Afeka Academic College of Engineering, Tel Aviv, IL",
-        description:["Courses: Databases and Data-Warehouse systems, object-oriented programming, web programming and UX-UI, data engineering.", "Specialiqation: Information systems analysis, machine learning"],
+        description:["Courses: Databases and Data-Warehouse Systems, Object-Oriented Programming and Design, Web Programming with UX-UI, Data Engineering.", "Specialization: Information Systems Analysis, Machine Learning."],
         date:"2018 - 2022",
         icon: <SchoolOutlinedIcon />
     },
