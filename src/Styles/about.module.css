@@ -34,6 +34,10 @@ div::-webkit-scrollbar{
     display: none;
   }
 
+  .no_underline {
+    text-decoration: none;
+  }
+
 
 @media screen and (max-width: 920px) {
     .left_div{

@@ -47,6 +47,7 @@ function About() {
                   download="Tamir_Gino_CV"
                   target="_blank"
                   rel="noreferrer"
+                  className={styles.no_underline}
                 >
                 <ThemeBtn text={"Download CV"} />
                 </a>
