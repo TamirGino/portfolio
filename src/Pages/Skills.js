@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import SkillsSwiper from '../Components/elements/Swiper';
 import { useMediaQuery } from '@mui/material';
 import Title from '../Components/elements/Title';
@@ -7,6 +7,10 @@ import styles from '../Styles/skills.module.css'
 function Skills() {
 
   const isLandscape = useMediaQuery('(max-height: 720px)');
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>          

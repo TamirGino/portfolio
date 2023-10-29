@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion, AnimatePresence } from "framer-motion";
 import Form from '../Components/elements/Form'
 import { useMediaQuery } from '@mui/material';
@@ -10,6 +10,10 @@ function Contact() {
   const isMediumScreen = useMediaQuery('(max-width: 720px)');
   const isSmallScreen = useMediaQuery('(max-width: 420px)');
   const isLandscape = useMediaQuery('(max-height: 720px)');
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>             

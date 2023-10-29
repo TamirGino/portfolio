@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from "framer-motion";
 import {  Typography } from '@mui/material';
 import { about_me_text } from '../Constants/constants';
@@ -10,14 +10,22 @@ import styles from '../Styles/about.module.css'
 import { useMediaQuery } from '@mui/material';
 
 function About() {
+  const isMediumScreen = useMediaQuery('(max-width: 520px) ');
   const isSmallScreen = useMediaQuery('(max-width: 420px)');
+  const isMaxHeight = useMediaQuery('(max-height: 600px)');
+
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>
         <div className={styles.container} id="about">
         <div className={styles.left_div} >
           <Title variant_sub={"h6"} subTitle={"INTRODUCTION"}
-                 fontSize={80} title={"ABOUT ME"} sx={{ml:2}} />
+                 fontSize={ isMediumScreen || isSmallScreen || isMaxHeight?  60 : 80}
+                  title={"ABOUT ME"} sx={{ml:2}} />
               <motion.div style={{gap:'0px'}}
               initial={{ x: 0, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
@@ -26,7 +34,7 @@ function About() {
                 {about_me_text.map((p) =>(
                   <Typography 
                     fontFamily={"Short Stack"}
-                    fontSize={ isSmallScreen ? 16 : 20}  
+                    fontSize={ isMaxHeight ? 12 : isSmallScreen ? 14 : isMediumScreen ?  16 : 20}  
                     key={p}
                     sx={{color: '#EFEDFF', }}>
                     {p}                

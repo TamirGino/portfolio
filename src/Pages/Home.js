@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from "framer-motion";
 import { IconButton, Typography } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -11,6 +11,11 @@ import styles from '../Styles/home.module.css'
 import my_img from "../Assets/Imgs/me1.png"
 
 function Home() {
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
+      
   return (
     <>
     <motion.div className={styles.container} 

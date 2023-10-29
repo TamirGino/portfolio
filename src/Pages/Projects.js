@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styles from '../Styles/projects.module.css'
 import ProjectCard from '../Components/elements/ProjectCard';
 import { useMediaQuery } from '@mui/material';
@@ -11,6 +11,10 @@ function Projects() {
 
   const isPortrait = useMediaQuery('(max-width: 620px)');
   const isLandscape = useMediaQuery('(max-height: 720px)');
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>
