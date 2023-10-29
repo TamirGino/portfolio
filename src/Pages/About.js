@@ -7,9 +7,11 @@ import TimeLineResume from '../Components/elements/TimeLineResume';
 import Title from '../Components/elements/Title';
 import pdf_file from '../Assets/Docs/Tamir_Gino.pdf'
 import styles from '../Styles/about.module.css'
-
+import { useMediaQuery } from '@mui/material';
 
 function About() {
+  const isSmallScreen = useMediaQuery('(max-width: 420px)');
+
   return (
     <>
         <div className={styles.container} id="about">
@@ -22,7 +24,9 @@ function About() {
               transition={{ duration: 2 }}
               >
                 {about_me_text.map((p) =>(
-                  <Typography fontSize={20} fontFamily={"Short Stack"}  
+                  <Typography 
+                    fontFamily={"Short Stack"}
+                    fontSize={ isSmallScreen ? 16 : 20}  
                     key={p}
                     sx={{color: '#EFEDFF', }}>
                     {p}                

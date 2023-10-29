@@ -18,8 +18,7 @@ function Projects() {
     <div className={styles.container} id="projects">
 
       <div className={styles.head} style={{gap:'0px'}}>
-      <Title variant_sub={"h6"} subTitle={"WHAT I HAVE DONE RECENTLY"}
-            // variant_title={isPortrait ? 'h2' : isLandscape ?  'h2' : 'h1'}
+      <Title variant_sub={"h6"} subTitle={"RECENTLY DONE"}
             fontSize={ isPortrait ? 65 : isLandscape ?  65 : 80}
             title={"PROJECTS"} sx={{display: isLandscape && 'none'}} />
       </div>

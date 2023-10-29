@@ -41,24 +41,26 @@ const theme = createTheme({
 
 const about_me_text =[
     "I'm a 29 years old programmer from Tel Aviv, Israel.",
-    "I have experience both in the High-Tech industry and as a freelancer, in the field of web development.",
-    "B.Sc. in industrial engineering and management.",
-    "Creative and passionate for new challenges.",
-    "Self-Learner, analytical and a great team player."
+    "I have experience in both the high-tech industry and freelancing, specializing in web development.",
+    "I hold a B.Sc. in industrial engineering and management, which has equipped me with a unique blend of problem-solving skills and efficiency.",
+    "What sets me apart is my unrelenting passion for taking on new challenges. Always eager to explore the creative possibilities that technology offers.",
 ] 
 
 const resume_text = [
     {
         title:"Freelancer",
         subTitle:"Web developer freelance - Tel Aviv, IL",
-        description:["As a freelance web designer and developer, I utilize a diverse set of skills and methods to craft functional web pages. My toolkit includes a mastery of Webflow platform, allowing me to transform ideas into visually stunning and responsive online experiences, among other skills and methods"],
+        description:["As a freelance web designer and developer, I utilize a diverse set of skills and methods to craft functional web pages. My toolkit includes a mastery of Webflow platform, allowing me to transform ideas into visually stunning and responsive online experiences, among other skills and methods."],
         date:"Aug 2023 - present",
         icon: <LaptopMacIcon />
     },
      {
         title:"Employment",
         subTitle:"Programmer, Beecomm, Tel-Aviv, IL",
-        description:["Design and develop web applications using React and Node js.", "Solve problems, maintain and develop new features according to the client's needs, using Visual Basic and SQL with Microsoft Access database.", "Assist in software updating in order to improve client's satisfaction."],
+        description:["Design and develop web applications using React and Node js.",
+         "Engaged in problem-solving, maintenance, and the incorporation of new features to meet client-specific requirements.",
+         "Utilized Visual Basic and SQL in conjunction with the Microsoft Access database to ensure efficient data management.",
+         "Played a pivotal role in enhancing client satisfaction through active participation in software updates and improvements."],
         date:"May 2022 - Aug 2023",
         icon: <WorkOutlineOutlinedIcon />
     },

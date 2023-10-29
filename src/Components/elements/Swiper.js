@@ -14,8 +14,8 @@ import { Grid, Pagination, Navigation } from 'swiper/modules';
 export default function SkillsSwiper() {
 
     const isLargeScreen = useMediaQuery('(min-width: 968px)');
-    const isMediumScreen = useMediaQuery('(min-width: 712px)');
-    const isSmallScreen = useMediaQuery('(min-width: 520px)');
+    const isMediumScreen = useMediaQuery('(min-width: 520px)');
+    const isSmallScreen = useMediaQuery('(min-width: 400px)');
     const [slidesPerView, setSlidesPerView] = useState(1)
 
   useEffect(() => {

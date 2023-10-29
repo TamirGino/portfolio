@@ -12,7 +12,7 @@ function Skills() {
     <>          
   <div className={styles.container} >
   <div className={styles.head}>
-    <Title variant_sub={"h6"} subTitle={"WHAT DO I USE"}
+    <Title variant_sub={"h6"} subTitle={"TOOLS & TECHNOLOGIES"}
             fontSize={80}
             title={"SKILLS"} sx={{ml:2, display: isLandscape && 'none'}} />
       </div>

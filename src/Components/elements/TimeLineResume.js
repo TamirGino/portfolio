@@ -24,7 +24,8 @@ return(
         className="vertical-timeline-element--work"
         contentArrowStyle={{ borderRight: '7px solid  #fff' }}
         date={<Typography variant='subtitle2' sx={{fontStyle:'italic', ml:2}}>
-            {text.date}</Typography>}
+            {text.date}
+            </Typography>}
         iconStyle={{ background: '#CDA716', color: '#fff' }}
         icon={text.icon}
         visible={true}
@@ -46,7 +47,7 @@ return(
                         sx={{fontWeight:'bold'}}>    
                             {text.subTitle}
                         </Typography>
-                    <Typography component={'span'} variant='body2'>
+                    <Typography component={'span'} variant='body2' fontSize={16}>
                         {Array.isArray(text.description)
                             ? (
                             <ul>
