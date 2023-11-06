@@ -53,7 +53,12 @@ export default function ProjectCard(props) {
        padding:1,borderTop:'0px solid #17182B', }}>
             <Tooltip title="View Git">
               <IconButton sx={{color:'white'}} size="small" 
-              onClick={() => window.open(props.gitLink, '_blank')}>
+              onClick={() => {
+                if (props.gitLink) {
+                  window.open(props.gitLink, '_blank');
+                }
+              }}
+              >
                       <GitHubIcon fontSize="medium" />
               </IconButton>
             </Tooltip> 

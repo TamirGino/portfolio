@@ -2,27 +2,22 @@
     display: 'flex important!';
     flex-wrap: 'wrap important!';
     justify-content: center;
-    width: 50%;
+    width: 60%;
     height: 100%;
     cursor:grab;
   }
   
   .swiper_slide {
+    
     transition: all .2s ease-in-out; 
     position: relative;
     text-align: center;
-    font-size: 18px;
     color: black;
     background: transparent;
     height: calc((100% - 30px) / 2) !important;
-    /* Center slide text vertically */
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 
   .swiper_slide img{
-    position: absolute;
     width: 60%;
     height: 80%;
     

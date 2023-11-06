@@ -20,6 +20,10 @@ import figma_logo from '../Assets/Logos/figma_logo.png'
 import fd from '../Assets/Imgs/face_detection.png'
 import qm from '../Assets/Imgs/question_mark.png'
 import ob from '../Assets/Imgs/nutriSurvey.png'
+import wm from '../Assets/Imgs/world_map.png'
+import wf1 from '../Assets/Imgs/webflow1.png'
+import wf2 from '../Assets/Imgs/webflow2.png'
+
 
 const theme = createTheme({
   palette: {
@@ -134,27 +138,19 @@ const cards_arr = [
         marginTop:1,
     },
     {
-        title:"Memory Game",
-        description: "Step into a futuristic world of memory mastery with Robot Memory Challenge, a web app I've created by seamlessly integrating a cool robots API to test your cognitive skills.",
-        gitLink:"https://github.com/TamirGino/Cool-App",
-        viewLink:"https://how-good-is-your-memory.web.app/",
-        src_img:qm,
-        marginTop:2,
-    },
-    {
         title:"NutriSurvey Portfolio",
         description: "A comprehensive platform designed to empower my nutritionist client and improve his connection with clients on their wellness journey.",
         gitLink:"https://github.com/TamirGino/oren-braude",
         viewLink:"https://project-oren-377a1.web.app/",
         src_img:ob,
         marginTop:1,
-    },
+    }, 
     {
-        title:"Face Detection",
-        description: "This full-stack web project combines React and Node.js with MongoDB to deliver a seamless user experience. The app utilizes the Clarifai API to detect faces in images when users insert a URL.",
-        gitLink:"https://github.com/TamirGino/Face-detection-App",
-        viewLink:"https://face-detection-clarifai.web.app/",
-        src_img:fd,
+        title:"Travel Advisor",
+        description: "An awsome app powered by Google Maps and RapidAPI. Users can explore destinations, access real-time data on restaurants, hotels, attractions and weather, all within a visually cool UI.",
+        gitLink:"https://github.com/TamirGino/travel-advisor",
+        viewLink:"https://travel-advisor-4u.web.app/",
+        src_img:wm,
         marginTop:1,
     },
     {
@@ -166,11 +162,19 @@ const cards_arr = [
         marginTop:2,
     },
     {
-        title:"NutriSurvey Portfolio",
-        description: "A comprehensive platform designed to empower my nutritionist client and improve his connection with clients on their wellness journey.",
-        gitLink:"https://github.com/TamirGino/oren-braude",
-        viewLink:"https://project-oren-377a1.web.app/",
-        src_img:ob,
+        title:"Webflow Pr. #1",
+        description: "Crafted upon a client's request for a compounded interest calculator. Calculates total profit and generates Visually graph depict investment growth over time for better financial planning.",
+        gitLink:"",
+        viewLink:"https://www.ynow.co.il/ynow-mkhshbvn-rybyt-drybyt",
+        src_img:wf1,
+        marginTop:1,
+    },
+    {
+        title:"Webflow Pr. #2",
+        description: "This user-friendly mortgage calculator simplifies financial planning. Users input key details, and it calculates the monthly payment, helping users make informed decisions about their financing.",
+        gitLink:"",
+        viewLink:"https://www.ynow.co.il/mortgage-calculator",
+        src_img:wf2,
         marginTop:1,
     },
     
