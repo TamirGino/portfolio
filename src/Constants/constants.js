@@ -132,8 +132,8 @@ const cards_arr = [
     {
         title:"Face Detection",
         description: "This full-stack web project combines React and Node.js with MongoDB to deliver a seamless user experience. The app utilizes the Clarifai API to detect faces in images when users insert a URL.",
-        gitLink:"https://github.com/TamirGino/Face-detection-App",
-        viewLink:"https://face-detection-clarifai.web.app/",
+        gitLink:"https://github.com/TamirGino/face-detection-app",
+        viewLink:"https://clarifai-face-detection.web.app/",
         src_img:fd,
         marginTop:1,
     },
@@ -156,7 +156,7 @@ const cards_arr = [
     {
         title:"Memory Game",
         description: "Step into a futuristic world of memory mastery with Robot Memory Challenge, a web app I've created by seamlessly integrating a cool robots API to test your cognitive skills.",
-        gitLink:"https://github.com/TamirGino/Cool-App",
+        gitLink:"https://github.com/TamirGino/memory-game",
         viewLink:"https://how-good-is-your-memory.web.app/",
         src_img:qm,
         marginTop:2,
