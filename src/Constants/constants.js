@@ -44,7 +44,7 @@ const theme = createTheme({
 });
 
 const about_me_text =[
-    "I'm a 29 years old programmer from Tel Aviv, Israel.",
+    "I'm a 30 year old programmer from Tel Aviv, Israel.",
     "I have experience in both the high-tech industry and freelancing, specializing in web development.",
     "I hold a B.Sc. in industrial engineering and management, which has equipped me with a unique blend of problem-solving skills and efficiency.",
     "What sets me apart is my unrelenting passion for taking on new challenges. Always eager to explore the creative possibilities that technology offers.",
@@ -54,18 +54,18 @@ const resume_text = [
     {
         title:"Freelancer",
         subTitle:"Web developer freelance - Tel Aviv, IL",
-        description:["As a freelance web designer and developer, I utilize a diverse set of skills and methods to craft functional web pages. My toolkit includes a mastery of Webflow platform, allowing me to transform ideas into visually stunning and responsive online experiences, among other skills and methods."],
-        date:"Aug 2023 - present",
+        description:["As a freelance web designer and developer, I worked with two different clients to transform ideas into visually stunning and responsive online experiences. Want to see what I’ve been working on? Head over to the Projects page to explore my portfolio of work!"],
+        date:"Nov 2023 - Jan 2024",
         icon: <LaptopMacIcon />
     },
      {
         title:"Employment",
-        subTitle:"Programmer, Beecomm, Tel-Aviv, IL",
+        subTitle:"Frontend developer, Beecomm, Tel-Aviv, IL",
         description:["Design and develop web applications using React and Node js.",
          "Engaged in problem-solving, maintenance, and the incorporation of new features to meet client-specific requirements.",
          "Utilized Visual Basic and SQL in conjunction with the Microsoft Access database to ensure efficient data management.",
          "Played a pivotal role in enhancing client satisfaction through active participation in software updates and improvements."],
-        date:"May 2022 - Aug 2023",
+        date:"May 2022 - Sep 2023",
         icon: <WorkOutlineOutlinedIcon />
     },
      {

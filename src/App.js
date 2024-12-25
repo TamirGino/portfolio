@@ -9,7 +9,6 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import PagesRouter from './Components/Routes/PagesRouter';
 
 
-
 function App() {
   return (
     <Router>
