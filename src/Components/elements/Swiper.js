@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useMediaQuery, Tooltip, Zoom } from '@mui/material';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import {skills_logo} from '../../Constants/constants'
-import styles from '../../Styles/swiper.module.css';
+import styles from '../../Styles/Swiper.module.css';
 
 // Import Swiper styles & modules
 import 'swiper/css';

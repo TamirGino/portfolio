@@ -44,22 +44,42 @@ const theme = createTheme({
 });
 
 const about_me_text =[
-    "I'm a 30 year old programmer from Tel Aviv, Israel.",
-    "I have experience in both the high-tech industry and freelancing, specializing in web development.",
-    "I hold a B.Sc. in industrial engineering and management, which has equipped me with a unique blend of problem-solving skills and efficiency.",
-    "What sets me apart is my unrelenting passion for taking on new challenges. Always eager to explore the creative possibilities that technology offers.",
+    "I'm a 31 year old programmer based in Tel Aviv, Israel.",
+    "I have experience in both the high-tech industry and freelancing, with a strong focus on web development.",
+    "I hold a B.Sc. in Industrial Engineering and Management, which has given me a unique combination of analytical thinking, problem-solving skills, and efficiency.",
+    "What sets me apart is my passion for taking on new challenges and continuously exploring the creative possibilities that technology offers.",
 ] 
 
 const resume_text = [
     {
-        title:"Freelancer",
-        subTitle:"Web developer freelance - Tel Aviv, IL",
-        description:["As a freelance web designer and developer, I worked with two different clients to transform ideas into visually stunning and responsive online experiences. Want to see what I’ve been working on? Head over to the Projects page to explore my portfolio of work!"],
-        date:"Nov 2023 - Jan 2024",
+        title: "Experience",
+        subTitle: "Frontend Developer & Data Engineer, Bioz (Remote / Tel Aviv, IL)",
+        description: [
+            "Design and develop responsive, branded user interfaces in React to present complex scientific and product data clearly and intuitively.",
+            "Build reusable UI components, dashboards, widgets, and interactive elements optimized for performance and accessibility.",
+            "Collaborate closely with product managers and designers to translate requirements into polished, user-focused front-end experiences.",
+            "Integrate frontend applications with backend APIs, ensuring reliability, scalability, and smooth data flow.",
+            "Build and maintain data pipelines to scrape, clean, and process large volumes of scientific content for biotech clients.",
+            "Develop ML-assisted workflows to match product listings with relevant research papers and strengthen product credibility."
+        ],
+        date: "Jan 2024 - Present",
+        icon: <WorkOutlineOutlinedIcon />
+    },
+    {
+        title: "Freelancer",
+        subTitle: "Web Developer (Freelance) — Tel Aviv, IL",
+        description: [
+            "Designed and developed responsive, visually engaging websites and web applications tailored to client needs and business goals.",
+            "Built a full-stack Face Detection application using React, Node.js, MongoDB, and the Clarifai API for real-time image analysis.",
+            "Developed a custom onboarding platform and admin dashboard for a nutritionist client using React and Firebase for secure data management.",
+            "Created a mortgage calculator and landing experience for Ynow using JavaScript and Webflow, optimized for usability and conversions.",
+            "Worked closely with clients from concept to delivery, translating ideas into scalable, user-friendly digital products."
+        ],
+        date: "Nov 2023 - Jan 2024",
         icon: <LaptopMacIcon />
     },
      {
-        title:"Employment",
+        title:"Experience",
         subTitle:"Frontend developer, Beecomm, Tel-Aviv, IL",
         description:["Design and develop web applications using React and Node js.",
          "Engaged in problem-solving, maintenance, and the incorporation of new features to meet client-specific requirements.",
@@ -71,7 +91,7 @@ const resume_text = [
      {
         title:"Education ",
         subTitle:"B.sc in Industrial Engineering & Management at Afeka Academic College of Engineering, Tel Aviv, IL",
-        description:["Courses: Databases and Data-Warehouse Systems, Object-Oriented Programming and Design, Web Programming with UX-UI, Data Engineering.", "Specialization: Information Systems Analysis, Machine Learning."],
+        description:["Courses: Deep Learning, Web Programming with UX-UI, Data Engineering, Databases and Data-Warehouse Systems, Object-Oriented Programming and Design", "Specialization: Machine Learning, Information Systems Analysis.", "Final Project: My 3-student group was recognized as the #1 project out of ~50 in my school for our online tool to custom-fit clothing sizes based on big data."],
         date:"2018 - 2022",
         icon: <SchoolOutlinedIcon />
     },

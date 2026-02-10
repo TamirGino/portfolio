@@ -8,7 +8,7 @@ import Typewriter from "typewriter-effect";
 import { Link } from 'react-router-dom';
 import ParticlesBg from '../Components/particles/ParticlesBg';
 import styles from '../Styles/home.module.css'
-import my_img from "../Assets/Imgs/me1.png"
+import my_img from "../Assets/Imgs/me.png"
 
 function Home() {
 
