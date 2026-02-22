@@ -8,6 +8,7 @@ const ThemeBtn = (props) => {
                         color: "white",
                         borderRadius:'25px',
                         borderColor: '#CDA716 !important',
+                        transition: "all 0.3s ease",
                         ":hover": {
                         bgcolor: "#CDA716",
                         },

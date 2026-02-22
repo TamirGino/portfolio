@@ -26,7 +26,10 @@
     height: 260px;
     border-radius: 10px;
     transform-style: preserve-3d;
-    animation: animate 18s linear infinite;
+    animation: animate 15s linear infinite;
+
+    --count: 5;
+    --radius: 320px;
 }
 
 .box:hover {
@@ -35,10 +38,10 @@
   
 @keyframes animate {
     0% {
-        transform: perspective(1000px) rotateY(0deg);
+        transform: perspective(800px) rotateY(0deg);
     }
     100%{
-        transform: perspective(1000px) rotateY(360deg);
+        transform: perspective(800px) rotateY(360deg);
     }
 }
 
@@ -48,7 +51,8 @@
     height: 100%;
     transform-origin: center;
     transform-style: preserve-3d;
-    transform: rotateY(calc(var(--i)* 60deg)) translateZ(320px);
+    /* transform: rotateY(calc(var(--i)* 60deg)) translateZ(320px); */
+    transform: rotateY(calc(var(--i) * (360deg / var(--count)))) translateZ(var(--radius));
     -webkit-box-reflect:below 0px linear-gradient(transparent, transparent, #0004);
 }
 
@@ -61,42 +65,23 @@
 }
 
 @media screen and (max-width: 920px) {
-    .box span {
-        transform: rotateY(calc(var(--i)* 60deg)) translateZ(250px);
-    }
-    .head{
-        padding-left: 30px;
-    }
-
+  .box { --radius: 250px; }
+  .head { padding-left: 30px; }
 }
+
 @media screen and (max-width: 600px) {
-    .box span {
-        transform: rotateY(calc(var(--i)* 60deg)) translateZ(150px);
-        -webkit-box-reflect:none;
-    }
+  .box { --radius: 150px; }
+  .box span { -webkit-box-reflect: none; }
 }
 
 @media screen and (max-width: 350px) {
-    .box span {
-        transform: rotateY(calc(var(--i)* 60deg)) translateZ(130px);
-        -webkit-box-reflect:none;
-    }
-    .head{
-        padding-left: 0px;
-    }
-    
+  .box { --radius: 130px; }
+  .box span { -webkit-box-reflect: none; }
+  .head { padding-left: 0px; }
 }
 
 @media screen and (max-height: 720px) {
-    .container{
-        gap:0px;
-    }
-    .box span {
-        transform: rotateY(calc(var(--i)* 60deg)) translateZ(150px);
-        
-    }
-    .head{
-        padding-left: 0px;
-    }
-    
+  .container { gap: 0px; }
+  .box { --radius: 150px; }
+  .head { padding-left: 0px; }
 }
